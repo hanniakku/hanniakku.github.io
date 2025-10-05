@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Akku Hanni — Publications</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="./favicon.png" type="image/png">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Akku Hanni</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a aria-current="page" href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container prose">
+    <h1>Publications</h1>
+    <p> 
+      <ul>
+        <li> <a href="https://arxiv.org/abs/2503.07848"> Safe Explicable Policy Search </a> <a href="https://drive.google.com/file/d/1s94rJXKqXoD7gN8qDNEvLgCpY9JoSFHv/view?usp=sharing"> <i class="fa fa-play-circle-o" >Video</i></a> <a target="_blank" rel="noreferrer" href="./papers/SEPS_ICRA-full_version.pdf"><i class="fa fa-file-pdf-o">PDF</i></a> 
+          <ul>
+            <li>Learning safe and explicable policy from user feedback via Constrained Policy Optimization.</li>
+            <li>A. Hanni, J. Montano, and Y. Zhang. </li>
+            <li> <em>[Under Review]</em> </li>
+          </ul>
+        </li>
+        <li> <a href="https://ojs.aaai.org/index.php/ICAPS/article/view/31482"> Safe Explicable Planning </a> <a href="https://drive.google.com/file/d/1-hMhpIqrwj1ImMJcKIhqmTUEOKfJPKs4/view?usp=sharing"> <i class="fa fa-play-circle-o" >Video</i></a> <a target="_blank" rel="noreferrer" href="./papers/SEP_ICAPS-full_version.pdf"><i class="fa fa-file-pdf-o">PDF</i></a> 
+          <ul>
+            <li> Finding safe and explicable policies through exact solution methods, with guarantees on optimality and completeness, in a model-based setting. </li>
+            <li> A. Hanni, A. Boateng and Y. Zhang. </li>
+            <li> <em> International Conference on Automated Planning and Scheduling (ICAPS), 2024.</em> </li>
+          </ul>
+        </li>
+        <li><a href="https://ieeexplore.ieee.org/document/9636643?denied=">Generating Active Explicable Plans for Human-Robot Teaming</a> <a target="_blank" rel="noreferrer" href="./papers/ActiveEXP_IROS.pdf"><i class="fa fa-file-pdf-o">PDF</i></a> 
+            <ul>
+            <li> Finding explicable plans by actively modeling change in user expectations when AI agent is observed, and validating by user studies. </li>
+            <li> A. Hanni and Y. Zhang. </li>
+            <li> <em> International Conference on Intelligent Robots and Systems (IROS), 2021.</em> </li>
+          </ul>
+        </li>
+        <li><a href="https://dl.acm.org/doi/10.1145/3434074.3447154">Active Explicable Planning for Human-Robot Teaming</a>  <a target="_blank" rel="noreferrer" href="./papers/ActiveEXP_HRI-LBR.pdf"><i class="fa fa-file-pdf-o">PDF</i></a> 
+            <ul>
+            <li> Finding explicable plans by modeling change in user expectations when AI agent is observed. </li>
+            <li> A. Hanni and Y. Zhang. </li>
+            <li> <em> International Conference on Human-Robot Interaction (HRI), Late-Breaking Reports, 2021.</em> </li>
+          </ul>
+        </li>
+        <li><a href="https://www.semanticscholar.org/paper/Generation-for-Human-Robot-Teaming-Zakershahrak-Gong/82eafe577aa3dbe1b5162681b64f288a88c97a15">Online Explanation Generation for Human-Robot Teaming</a> <a target="_blank" rel="noreferrer" href="./papers/OnlineEXPGen_ICAPS-Workshop.pdf"><i class="fa fa-file-pdf-o">PDF</i></a> 
+            <ul>
+            <li> Interleaving explanation (“online”) with execution, via model reconciliation, to reduce humans’ cognitive load in human-robot teaming. </li>
+            <li> M. Zakershahrak, Z. Gong, A. Hanni and Y. Zhang. </li>
+            <li> <em> International Conference on Automated Planning and Scheduling (ICAPS), Workshop on Explainable AI Planning, 2019.</em> </li>
+          </ul>
+        </li>
+        <li> <a href="https://famishedrover.github.io/files/Noisy_Restraining_Bolt.pdf">Perfect Observability is a Myth: Restraining Bolts in the Real World</a> <a target="_blank" rel="noreferrer" href="./papers/NoisyBolt_arXiv.pdf"><i class="fa fa-file-pdf-o">PDF</i></a> 
+            <ul>
+            <li> Introducing a “restraining bolt” that imposes temporal logic constraints via noisy, probabilistic observations and reward shaping, relaxing the assumption of perfect fluents in human-robot/control settings. </li>
+            <li> M. Verma, N. Shah, R. Nayyar, and A. Hanni.</li>
+            <li> <em> arXiv preprint</em> </li>
+          </ul>
+        </li>
+        
+      </ul>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Akku Hanni</small>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a aria-current="page" href="publications.html">Publications</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

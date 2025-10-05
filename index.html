@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Akku Hanni — Home</title>
+  <meta name="description" content="Personal website of Akku Hanni." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="./favicon.png" type="image/png">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Akku Hanni</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a aria-current="page" href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <div class="portrait-wrap">
+        <figure class="portrait-figure">
+          <!-- Replace with your actual photo -->
+          <img class="portrait" src="./photo.jpg" alt="Akku_Portrait" />
+          <figcaption class="portrait-caption">
+            <div class="portrait-name">Akku Hanni</div>
+            <div class="portrait-title" >Ph.D. Candidate, Computer Science</div>
+            <!-- Optional: show your affiliation just like the reference site -->
+            <div class="portrait-affiliation">
+              <a href="https://www.asu.edu" target="_blank" rel="noreferrer">Arizona State University</a>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="hero-copy">
+        
+        <p>
+          I’m a Ph.D. candidate in Computer Science at Arizona State University, advised by <a href="https://crslabasu.github.io/" rel="noreferrer">Dr. Yu Zhang</a>. 
+          My goal is to build safe and explainable autonomous agents. 
+          My research interests include 
+          <em> Explainable AI Planning, AI Safety, Reinforcement Learning, Constrained Optimization, </em> 
+          and the gray areas in-between.  
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="research.html">See Research</a>
+          <!-- <a class="btn" href="contact.html">Get in touch</a> -->
+          <a class="btn" target="_blank" rel="noreferrer" href="./Akku_Hanni_Resume.pdf">CV / Resume</a>
+        </div>
+        <p class="socials"> <i class="fa fa-envelope icon-hover" href=""></i> · <i class="fa fa-google icon-hover" href=""></i> · <i class="fa fa-github icon-hover" href=""></i> · <i class="fa fa-twitter icon-hover" href=""></i></p>
+      </div>
+    </section>
+
+    <section class="container grid-cards">
+      <article class="card">
+        <h3>Latest</h3>
+        <p>
+          <ul>
+            <li>Invited talk at Toyota Research (TRINA), Sept 2025, Ann Arbor, MI</li>
+          </ul>
+
+        </p>
+      </article>
+      <article class="card">
+        <h3>Teaching</h3>
+        <p>
+          <ul>
+            <li> Graduate Teaching Instructor
+              <ul>
+                  <li> Artificial Intelligence (CSE 571) | Fall 2024 </li>
+                  <li> Principles of Programming with c++ (CSE 100) | Spring 2020 </li>
+                  <li> Introduction to Engineering (FSE 100) | Fall 2019, Fall 2020, Fall 2021 </li>
+              </ul>
+            </li>
+            <li> Graduate Teaching Assistant
+              <ul> 
+                  <li> Artificial Intelligence (CSE 571) | Spring 2020, Fall 2020, Fall 2021, Fall 2022, Spring 2024 </li>
+                  <li> Introduction to Artificial Intelligence (CSE 471) | Spring 2021, Spring 2022, Spring 2023, Fall 2023 </li>
+                  <li> Data Processing at Scale (CSE 511) | Spring 2022 </li>
+                  <li> Human-Computer Interaction (CSE 463) | Fall 2018 </li>
+                  <li> Evaluation of Informatics Systems (CPI 350) | Spring 2019 </li>
+                  <li> Introduction to Programming (CSE 110) | Fall 2018, Spring 2019, Fall 2020 </li>
+            </ul>
+            </li>
+          </ul>
+        </p>
+      </article>
+      <article class="card">
+        <h3>Honors and Service</h3>
+        <p>
+          <ul>
+            <li> University Graduate Fellowship 2025 </li>
+            <li> SCAI Doctoral Fellowship 2024 </li>
+            <li> SCAI, and ASU Graduate College Travel Grants 2024 </li>
+            <li> GPSA Grad Slam winner 2023 </li>
+            <li> Conference Reviewer / PC member - ICAPS 2025, AAAI 2024, 2023; Neurips 2024, 2023; IROS 2023, 2024; RSS 2023; HRI 2021 </li>
+            <!-- <li> Received Department Recognition Award and Spot Bonus Award for Outstanding Performance and Contributions in Juniper Networks </li>
+            <li> Lead organizer for Daan Utsav (India’s largest volunteer driven philanthropic event) in Dharwad district, 2016 </li>
+            <li> Served as the Vice President of the Association of Computer Science Students at BVBCET, Hubli 2014-2016 </li> -->
+          </ul>
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Akku Hanni</small>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

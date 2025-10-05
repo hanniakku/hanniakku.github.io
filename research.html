@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akku Hanni — Research</title>
+  <meta name="description" content="Research of Akku Hanni." />
+  <link rel="icon" href="./favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root{
+      --bg:#ffffff; --text:#0f172a; --muted:#6b7280; --line:#e5e7eb;
+      --card:#fafafa; --accent:#111111;
+    }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      text-rendering:optimizeLegibility;
+    }
+
+    /* Accessibility: skip link */
+    .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus{
+      position:fixed; left:16px; top:12px; width:auto; height:auto;
+      padding:8px 10px; background:#fff; border:1px solid var(--line); z-index:1000;
+    }
+
+    /* Layout helpers */
+    .container { width: 100%; max-width: 900px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 24px); }
+    .prose{ padding: clamp(16px, 4vw, 28px) 0 64px; }
+    .prose h1{ font-size:clamp(28px, 6vw, 40px); margin:0 0 6px; text-align:center; }
+    .prose p, .prose li{ color:#334155; max-width:80ch; margin-inline:auto; }
+
+    /* Header meta */
+    .author{ color:var(--muted); font-size:18px; font-weight:400; text-align:center; }
+
+    /* Subtitles */
+    .post h2{ font-size:clamp(22px, 4.5vw, 28px); margin:0 0 8px; text-align:center; }
+
+    /* Intro */
+    .intro{ color:#475569; text-align:justify; }
+
+    /* Figures */
+    figure{ margin:0; } /* reset browser default margins */
+    .fig-pair{
+      display:grid; gap:clamp(12px, 2.8vw, 18px);
+      grid-template-columns:1fr; margin-top:20px;
+    }
+    @media (min-width: 900px){
+      .fig-pair{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+    }
+    .fig-single{ margin-top:clamp(12px, 2.8vw, 18px); width: 100%; height: auto; display: block;}
+
+    .media{
+      background:var(--card); border:1px solid var(--line);
+      border-radius:12px; overflow:hidden;
+      box-shadow:0 6px 20px rgba(0,0,0,.03);
+    }
+    .media img{
+      display:block; width:100%; height:auto;
+    }
+    .media figcaption{
+      padding:8px 10px; font-size:.9rem; color:#475569; border-top:1px solid var(--line);
+      text-align:center;
+    }
+
+    /* Text blocks */
+    .meta{ color:#64748b; text-align:justify; }
+    .methods1{ text-align:justify; }
+
+    /* Inline callouts/links */
+    .affiliation{
+      background:#fff; border:1px solid var(--line); border-radius:12px;
+      padding:12px; margin:12px 0;
+      box-shadow:0 6px 18px rgba(0,0,0,.03);
+    }
+    .affiliation a{ color:#334155; text-decoration:none; font-weight:600; text-align: center;}
+    .affiliation a:hover{ text-decoration:underline; }
+
+    /* Video gallery */
+    .video-grid{
+      display:grid; gap:clamp(12px, 2.8vw, 18px); 
+      grid-template-columns:1fr;
+      margin-top:16px;
+    }
+    @media (min-width: 900px){
+      .video-grid{ grid-template-columns:repeat(3, minmax(0,1fr)); }
+    }
+    .video-wrap{
+      background:#fff; border:1px solid var(--line); border-radius:12px;
+      overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,.03);
+    }
+    .video-wrap figcaption{
+      padding:8px 10px; font-size:.9rem; color:#475569; border-top:1px solid var(--line);
+      text-align:center;
+    }
+    video{ width:100%; height:auto; display:block; }
+
+    /* Footer */
+    .site-footer{ border-top:1px solid var(--line); margin-top:40px; }
+    .footer-inner{
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;
+      padding-block:16px;
+    }
+    .footer-inner nav a{ color:#475569; text-decoration:none; margin-left:12px; }
+    .footer-inner nav a:hover{ text-decoration:underline; }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Akku Hanni</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a aria-current="page" href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container prose">
+    <h1>Safe and Explainable Behavior Generation</h1>
+    <div class="author">Akkamahadevi Hanni</div>
+
+    <section class="intro">
+      <p>
+        Recent advances in Artificial Intelligence (AI) have enabled autonomous agents to operate around humans, deployed for user access. In such scenarios, success not only depends on the efficiency of the task but also on the human’s ability to understand the AI agent’s behavior. Similar to how humans develop mental models of their teammates, users often form expectations of AI agents based on observed behavior, a process grounded in theory-of-mind reasoning. When the AI agent's behavior deviates from user expectations, it can lead to confusion, poor team performance, and reduced trust. Explainable AI systems aim to build AI agents that are interpretable to users.
+      </p>
+      <p>
+        Generally, explainable AI systems rely on post-hoc explanations by the AI agent, where it retrospectively justifies its decisions, which are often untimely or cognitively taxing for users. This has led to a growing interest in building AI agents that are implicitly explainable, i.e., agents that proactively choose behaviors that are interpretable to users, reducing the cognitive burden and fostering trust.
+      </p>
+    </section>
+
+    <!-- Figures: 1 & 2 together -->
+    <section class="fig-pair" aria-label="Illustrations (Figures 1 & 2)">
+      <figure class="media">
+        <img src="./research/planning3.png" alt="An illustrative diagram of autonomous planning." />
+        <figcaption>Figure 1. Autonomous Planning</figcaption>
+      </figure>
+      <figure class="media">
+        <img src="./research/XAIP.png" alt="A conceptual diagram of Explainable AI Planning (XAIP)." />
+        <figcaption>Figure 2. Explainable AI Planning (XAIP)</figcaption>
+      </figure>
+    </section>
+
+    <!-- Figure 3 below, single full-width -->
+    <section class="fig-single" aria-label="Illustration (Figure 3)">
+      <figure class="media">
+        <img src="./research/SXAIP.png" alt="A schematic of Safe and Explainable AI Planning." />
+        <figcaption>Figure 3. Safe and Explainable AI Planning</figcaption>
+      </figure>
+    </section>
+
+    <article class="post">
+      <header class="post-hero">
+        <h2>Why do we need to consider safety explicitly in XAIP?</h2>
+        <section class="meta"> 
+          <p>
+            Without explicit safety checks, explainability-driven deviations from optimal policies can introduce risk in safety-critical environments.
+          </p>
+          <p>
+            Despite the promise of Explainable AI Planning (XAIP), existing approaches to generating implicitly explainable behavior often overlook safety considerations. By design, XAIP allows AI agents to deviate from expert-intended (optimal) behavior to produce actions that are more interpretable to the user-in-the-loop. In practice, however, this can be problematic. Without proper safety checks, such deviations can lead to unsafe or risky actions that pose potential hazards in safety-critical environments. Addressing this challenge involves fundamental trade-offs and highlights a key gap in current research: the need to develop explainable agents that are also provably safe.
+          </p>
+          <p>
+            For example, consider an autonomous agent designed to deliver coffee. Its task objective typically includes collision avoidance and maintaining a safe velocity. However, if the agent prioritizes explainable goals such as “fast delivery,” without explicitly enforcing safety constraints, it may engage in unsafe behaviors such as bumping into someone or spilling hot coffee.
+          </p>
+          <p>
+            The goal of this research is to develop methods for autonomous agents that generate explainable behaviors while preserving safety, thereby ensuring that explainable AI agents remain reliable and suitable for deployment in safety-critical environments.
+          </p>
+        </section>
+      </header>
+
+      <section class="methods1">
+        <h2>Measuring Explainability and Safety</h2>
+        <p>
+          Explainability and safety may be expressed in various ways, depending on the task. We consider the broadly used cumulative returns (expected values) to measure explainability and safety.
+        </p>
+        <p>
+          <strong>[Explainability]</strong> We assume that the user is a rational thinker. Therefore, behaviors that are associated with <u>high values in the user's model</u> can be considered more explicable to the user.
+        </p>
+        <p>
+          <strong>[Safety]</strong> Similarly, behaviors that are associated with <u>low values in the agent's model</u> can be considered unsafe in the environment.
+        </p>
+
+        <div class="affiliation">
+          <a href="https://dl.acm.org/doi/10.1609/icaps.v34i1.31482" target="_blank" rel="noreferrer" ><strong>Safe Explicable Planning (SEP)</strong></a>
+          <p>
+            SEP addresses the problem of safe and explainable behavior generation in <em>discrete</em> environments, when the models of the user and the agent are available. The focus is to define the SEP problem, develop exact and approximate solution techniques, prove optimality and completeness of the proposed algorithms, and evaluate them in simulated and physical-robot experiments.
+          </p>
+        </div>
+
+        <div class="affiliation">
+          <a href="https://arxiv.org/abs/2503.07848" target="_blank" rel="noreferrer"><strong>Safe Explicable Policy Search (SEPS)</strong></a>
+          <p>
+            In reality, user expectations are not readily available but can be learned from user feedback. SEPS addresses safe and explainable behavior generation in <em>continuous</em> environments when the user model and the environment model are unknown. It adapts the explicability measure from prior work to reduce the problem to a Constrained Markov Decision Process (CMDP), and derives an analytical solution to the constrained optimization problem in the general case of two constraints. Efficacy is demonstrated in simulated and physical-robot experiments.
+          </p>
+        </div>
+      </section>
+
+      <section aria-label="Demonstration videos">
+        <h2>Demonstrations</h2>
+        <div class="video-grid">
+          <figure class="video-wrap">
+            <video controls muted playsinline>
+              <source src="./research/1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Optimal Agent Behavior</figcaption>
+          </figure>
+          <figure class="video-wrap">
+            <video controls muted playsinline>
+              <source src="./research/2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Safe Explicable Behavior 1</figcaption>
+          </figure>
+          <figure class="video-wrap">
+            <video controls muted playsinline>
+              <source src="./research/3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Safe Explicable Behavior 2</figcaption>
+          </figure>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>&copy; <span id="y"></span> Akku Hanni</small>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="publications.html">Publications</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
